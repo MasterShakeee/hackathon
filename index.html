@@ -157,7 +157,7 @@ function render(l){
  $('place').textContent=CFG.place[l];$('time').textContent=CFG.time[l];
  document.querySelectorAll('.cd small').forEach((e,i)=>e.textContent=t.u[i]);
  $('ab').innerHTML=t.ab.map((c,i)=>`<div class="panel tilt"><span class="num">${i+1}</span><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('');
- $('pr').innerHTML=t.pr.map((p,i)=>`<div class="panel tilt"><span class="num">${i+1}</span><h3>${p}</h3><p>${t.pz}</p></div>`).join('');
+ $('pr').innerHTML=t.pr.map((p,i)=>`<div class="panel tilt"><span class="num">${i+1}</span><h3>${p}</h3><p>${t.pz[i]}</p></div>`).join('');
  $('tr').innerHTML=ZN.map(z=>`<div class="panel tilt${z[0]==='?'?' idea':''}"><span class="bd">${z[0]}</span><h3>${z[1][l][0]}</h3><p>${z[1][l][1]}</p></div>`).join('');
  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
  try{localStorage.setItem('lang',l)}catch(e){}
